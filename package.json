@@ -1,0 +1,18 @@
+{
+  "name": "rinso-laundry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistem Laundry (Pelanggan, Layanan, Pesanan) - REST API Node.js + Web React TypeScript",
+  "workspaces": ["server", "web"],
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c cyan,magenta \"npm run dev -w server\" \"npm run dev -w web\"",
+    "start": "npm run build -w web && npm run start -w server",
+    "build": "npm run build -w web",
+    "test": "npm test -w server",
+    "seed": "npm run seed -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
