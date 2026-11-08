@@ -1,0 +1,8 @@
+.auth-container { max-width: 480px; }
+.receipt-overlay { position: fixed; inset: 0; background: #0008; display: grid; place-items: center; padding: 1rem; z-index: 1000; }
+.receipt { width: min(100%, 480px); }
+@media print {
+  .app-content, .receipt-actions { display: none !important; }
+  .receipt-overlay { position: static; display: block; background: white; padding: 0; }
+  .receipt { border: 0; width: 100%; }
+}
